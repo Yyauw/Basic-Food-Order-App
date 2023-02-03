@@ -1,3 +1,5 @@
+import MealItem from "./MealItem";
+
 const DUMMY_MEALS = [
     {
       id: 'm1',
@@ -27,11 +29,11 @@ const DUMMY_MEALS = [
   
   const AvailableMeals = () =>{
     const Menu= DUMMY_MEALS.map(meal =>{
-        return <li className="mt-3">{meal.name}</li>
+        return <li key={meal.id}><MealItem meal={meal}/></li>
     })
 
     return (
-        <ul className="card">
+        <ul className="card p-4">
             {Menu}
         </ul>
     )

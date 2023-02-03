@@ -5,13 +5,13 @@ import HeaderCartButton from "./HeaderCartButton";
 const Header = (props) => {
   return (
     <Fragment>
-      <header className="">
+      <header className="sticky-top">
         <nav className="navbar bg-body-tertiary bg-dark navbar-dark">
           <div className="container-fluid container p-2">
             <h1 className="navbar-brand mb-0 h1 p-1 text-danger fs-2">FoodApp</h1>
-            <form className="d-flex" role="search">
-              <HeaderCartButton/>
-            </form>
+            
+              <HeaderCartButton openCar={props.openCar} />
+            
           </div>
         </nav>
       </header>
